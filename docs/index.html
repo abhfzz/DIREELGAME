@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIREEL - Cabina</title>
+
+<title>DIREEL - Simulador</title>
 
 <link rel="icon" href="img/logotab.ico" type="image/x-icon">
 <link rel="stylesheet" href="styles.css">
@@ -11,35 +12,44 @@
 
 <body>
 
+<!-- LOGO -->
 <img src="img/logo.png" id="logo">
 
+<!-- HUD SUPERIOR -->
 <div id="hudTop">
   <div id="nivel">Nivel 1</div>
-  <div id="timer">45</div>
+  <div id="timer">15</div>
 </div>
 
+<!-- CABINA -->
 <div id="cabina">
-  <div id="road"></div>
 
+  <!-- PREGUNTA -->
   <div id="questionBox">
     <h2 id="question">Presiona iniciar</h2>
   </div>
 
+  <!-- VOLANTE -->
   <div id="wheel">🛞</div>
 
+  <!-- RESPUESTAS -->
   <div id="answers">
     <button onclick="responder(0)">A</button>
     <button onclick="responder(1)">B</button>
     <button onclick="responder(2)">C</button>
   </div>
 
-  <div id="progressBar">
-    <div id="progress"></div>
-  </div>
 </div>
 
+<!-- BARRA -->
+<div id="progressBar">
+  <div id="progress"></div>
+</div>
+
+<!-- START -->
 <button id="start">Iniciar</button>
 
 <script src="script.js"></script>
+
 </body>
 </html>
