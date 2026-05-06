@@ -3,7 +3,7 @@ body{
  font-family:Arial;
  background:#0b0f1a;
  color:white;
- text-align:center;
+ overflow:hidden;
 }
 
 /* LOGO */
@@ -15,71 +15,92 @@ body{
  z-index:1000;
 }
 
-h1{
- color:#c40000;
- margin-top:80px;
-}
-
-#start{
+/* TOP HUD */
+#hudTop{
  position:fixed;
- bottom:20px;
- right:20px;
- background:#c40000;
- color:white;
- padding:14px;
- border:none;
- border-radius:30px;
- cursor:pointer;
+ top:10px;
+ right:10px;
+ display:flex;
+ gap:20px;
+ font-size:18px;
 }
 
 /* CABINA */
-#game{display:none;}
-
 #cabina{
- height:300px;
- margin:20px;
- border-radius:10px;
- background:linear-gradient(to top,#111,#1a1a1a);
+ height:100vh;
  position:relative;
- overflow:hidden;
 }
 
-/* HUD (parabrisas) */
-#hud{
+/* CARRETERA + CIELO */
+#road{
  position:absolute;
- top:0;
- left:0;
  width:100%;
  height:100%;
- background:rgba(0,0,0,0.4);
- backdrop-filter:blur(3px);
- display:flex;
- flex-direction:column;
- justify-content:space-between;
-}
-
-/* STATUS */
-#status{
- display:flex;
- justify-content:space-around;
- background:rgba(10,42,102,0.8);
- padding:10px;
+ background:
+ linear-gradient(to top, #222 30%, transparent),
+ linear-gradient(#1a1a2e,#0b0f1a);
 }
 
 /* PREGUNTA */
 #questionBox{
- padding:20px;
+ position:absolute;
+ top:20%;
+ width:100%;
+ text-align:center;
+}
+
+/* VOLANTE */
+#wheel{
+ position:absolute;
+ bottom:120px;
+ width:100%;
+ text-align:center;
+ font-size:50px;
+}
+
+/* RESPUESTAS */
+#answers{
+ position:absolute;
+ bottom:40px;
+ width:100%;
+ display:flex;
+ justify-content:center;
+ gap:20px;
 }
 
 #answers button{
- display:block;
- width:80%;
- margin:5px auto;
+ padding:15px 30px;
+ font-size:18px;
+ background:#c40000;
+ border:none;
+ color:white;
+ border-radius:5px;
 }
 
-/* FEEDBACK */
-#feedback{
- font-size:20px;
- font-weight:bold;
- margin-bottom:10px;
+/* PROGRESO */
+#progressBar{
+ position:absolute;
+ right:10px;
+ top:20%;
+ width:10px;
+ height:60%;
+ background:#333;
+}
+
+#progress{
+ width:100%;
+ height:0%;
+ background:#c40000;
+}
+
+/* START */
+#start{
+ position:fixed;
+ bottom:20px;
+ right:20px;
+ padding:15px;
+ background:#c40000;
+ border:none;
+ color:white;
+ border-radius:30px;
 }
