@@ -7,7 +7,7 @@ Juego interactivo basado en diagnóstico automotriz.
 Simula fallas reales y evalúa conocimientos técnicos mediante preguntas.
 
 ## Acceso
-https://tuusuario.github.io/juego-direel
+https://github.com/abhfzz/DIREELGAME
 
 ## Tecnologías
 - HTML
