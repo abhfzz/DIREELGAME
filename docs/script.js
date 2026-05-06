@@ -2,11 +2,11 @@ let nivel=1;
 let score=0;
 let tiempo=10;
 let progreso=0;
+let posX=0;
 let idx=0;
 let preguntasNivel=[];
 let timer;
 
-// BANCO COMPLETO (10 por nivel)
 const banco={
 1:[
 {p:"¿Qué necesita el motor?",r:["Aire+comb+chispa","Gasolina","Aire"],c:0,code:"BASE"},
@@ -70,20 +70,17 @@ const banco={
 ]
 };
 
-// Mezclar
 function shuffle(a){return a.sort(()=>Math.random()-0.5);}
 
-// Inicio
 document.getElementById("start").onclick=()=>{
  document.getElementById("game").style.display="block";
  document.getElementById("start").style.display="none";
  cargarNivel();
 };
 
-// Cargar nivel → SOLO 2 preguntas
 function cargarNivel(){
  document.getElementById("level").innerText=nivel;
- preguntasNivel=shuffle([...banco[nivel]]).slice(0,2); // 👈 CAMBIO AQUÍ
+ preguntasNivel=shuffle([...banco[nivel]]).slice(0,2);
  idx=0;
  mostrarPregunta();
 }
