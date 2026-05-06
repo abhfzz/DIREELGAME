@@ -3,41 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIREEL - Juego</title>
+
+<title>DIREEL - Diagnóstico en Ruta</title>
+
+<!-- FAVICON -->
+<link rel="icon" href="img/logotab.ico" type="image/x-icon">
+
+<!-- CSS -->
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<h1>DIREEL - Diagnóstico en Ruta</h1>
+<!-- LOGO FIJO -->
+<img src="img/logo.png" id="logo">
+
+<h1>🚛 DIREEL - Diagnóstico en Ruta</h1>
 
 <button id="start">Jugar ahora</button>
 
 <div id="game">
 
-<div id="road">
-<img id="truck" src="https://cdn-icons-png.flaticon.com/512/1995/1995470.png">
-</div>
+  <!-- ESCENA -->
+  <div id="road">
+    <img id="truck" src="https://cdn-icons-png.flaticon.com/512/1995/1995470.png">
+  </div>
 
-<div id="info">
-<div>Puntaje: <span id="score">0</span></div>
-<div>Tiempo: <span id="time">10</span></div>
-<div>Nivel: <span id="level">1</span></div>
-<div>Código: <span id="code">---</span></div>
-</div>
+  <!-- PANEL -->
+  <div id="info">
+    <div>Puntaje: <span id="score">0</span></div>
+    <div>Tiempo: <span id="time">10</span></div>
+    <div>Nivel: <span id="level">1</span></div>
+    <div>Código: <span id="code">---</span></div>
+  </div>
 
-<div id="question"></div>
+  <!-- PREGUNTAS -->
+  <div id="question"></div>
 
-<!-- CONTROLES -->
-<div id="controls">
-<button id="left">⬅️</button>
-<button id="accelerate">⬆️</button>
-<button id="brake">⬇️</button>
-<button id="right">➡️</button>
-</div>
+  <!-- CONTROLES -->
+  <div id="controls">
+    <button id="left">⬅️</button>
+    <button id="accelerate">⬆️</button>
+    <button id="brake">⬇️</button>
+    <button id="right">➡️</button>
+  </div>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
