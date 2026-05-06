@@ -2,12 +2,11 @@ let nivel=1;
 let score=0;
 let tiempo=10;
 let progreso=0;
-let posX=0;
 let idx=0;
 let preguntasNivel=[];
 let timer;
 
-// BANCO 50 PREGUNTAS
+// BANCO COMPLETO (10 por nivel)
 const banco={
 1:[
 {p:"¿Qué necesita el motor?",r:["Aire+comb+chispa","Gasolina","Aire"],c:0,code:"BASE"},
@@ -71,18 +70,20 @@ const banco={
 ]
 };
 
-// iniciar
+// Mezclar
+function shuffle(a){return a.sort(()=>Math.random()-0.5);}
+
+// Inicio
 document.getElementById("start").onclick=()=>{
  document.getElementById("game").style.display="block";
  document.getElementById("start").style.display="none";
  cargarNivel();
 };
 
-function shuffle(a){return a.sort(()=>Math.random()-0.5);}
-
+// Cargar nivel → SOLO 2 preguntas
 function cargarNivel(){
  document.getElementById("level").innerText=nivel;
- preguntasNivel=shuffle([...banco[nivel]]).slice(0,3);
+ preguntasNivel=shuffle([...banco[nivel]]).slice(0,2); // 👈 CAMBIO AQUÍ
  idx=0;
  mostrarPregunta();
 }
@@ -141,27 +142,4 @@ function responder(i,c){
 
  idx++;
  mostrarPregunta();
-}
-
-// CONTROLES MÓVIL
-document.getElementById("left").onclick=()=>{posX-=10; actualizar();}
-document.getElementById("right").onclick=()=>{posX+=10; actualizar();}
-document.getElementById("accelerate").onclick=()=>{progreso+=5; actualizar();}
-document.getElementById("brake").onclick=()=>{progreso-=5; actualizar();}
-
-// TECLADO
-document.addEventListener("keydown",(e)=>{
- if(e.key==="ArrowLeft") posX-=10;
- if(e.key==="ArrowRight") posX+=10;
- if(e.key==="ArrowUp") progreso+=5;
- if(e.key==="ArrowDown") progreso-=5;
-
- if(progreso<0)progreso=0;
- actualizar();
-});
-
-function actualizar(){
- document.getElementById("truck").style.left=progreso+"%";
- document.getElementById("truck").style.transform=`translateX(${posX}px)`;
- document.getElementById("score").innerText=score;
 }
