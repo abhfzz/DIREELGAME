@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIREEL - Cabina de Diagnóstico</title>
+<title>DIREEL - Cabina</title>
 
 <link rel="icon" href="img/logotab.ico" type="image/x-icon">
 <link rel="stylesheet" href="styles.css">
@@ -11,39 +11,34 @@
 
 <body>
 
-<!-- Logo -->
 <img src="img/logo.png" id="logo">
 
-<h1>DIREEL - Cabina de Diagnóstico</h1>
+<div id="hudTop">
+  <div id="nivel">Nivel 1</div>
+  <div id="timer">45</div>
+</div>
 
-<button id="start">Iniciar</button>
+<div id="cabina">
+  <div id="road"></div>
 
-<div id="game">
-
-  <!-- CABINA -->
-  <div id="cabina">
-
-    <!-- PARABRISAS / HUD -->
-    <div id="hud">
-
-      <div id="status">
-        <div>Aciertos: <span id="score">0</span></div>
-        <div>Nivel: <span id="level">Operador</span></div>
-        <div>Tiempo: <span id="time">10</span></div>
-      </div>
-
-      <div id="questionBox">
-        <h2 id="question">Preparando...</h2>
-        <div id="answers"></div>
-      </div>
-
-      <div id="feedback"></div>
-
-    </div>
-
+  <div id="questionBox">
+    <h2 id="question">Presiona iniciar</h2>
   </div>
 
+  <div id="wheel">🛞</div>
+
+  <div id="answers">
+    <button onclick="responder(0)">A</button>
+    <button onclick="responder(1)">B</button>
+    <button onclick="responder(2)">C</button>
+  </div>
+
+  <div id="progressBar">
+    <div id="progress"></div>
+  </div>
 </div>
+
+<button id="start">Iniciar</button>
 
 <script src="script.js"></script>
 </body>
