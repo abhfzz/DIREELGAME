@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>DIREEL - Simulador</title>
 
+<!-- FAVICON -->
 <link rel="icon" href="img/logotab.ico" type="image/x-icon">
+
+<!-- CSS -->
 <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
 
 <!-- LOGO -->
-<img src="img/logo.png" id="logo">
+<img src="img/logo.png" id="logo" alt="DIREEL Logo">
 
 <!-- HUD SUPERIOR -->
 <div id="hudTop">
-  <div id="nivel">Nivel 1</div>
-  <div id="timer">15</div>
+
+  <div id="nivel">
+    Nivel 1
+  </div>
+
+  <div id="timer">
+    15
+  </div>
+
 </div>
 
 <!-- CABINA -->
@@ -26,29 +39,50 @@
 
   <!-- PREGUNTA -->
   <div id="questionBox">
-    <h2 id="question">Presiona iniciar</h2>
+
+    <h2 id="question">
+      Presiona iniciar
+    </h2>
+
   </div>
 
   <!-- VOLANTE -->
-  <div id="wheel">🛞</div>
+  <div id="wheel">
+    🛞
+  </div>
 
   <!-- RESPUESTAS -->
   <div id="answers">
-    <button onclick="responder(0)">A</button>
-    <button onclick="responder(1)">B</button>
-    <button onclick="responder(2)">C</button>
+
+    <button type="button" onclick="responder(0)">
+      A
+    </button>
+
+    <button type="button" onclick="responder(1)">
+      B
+    </button>
+
+    <button type="button" onclick="responder(2)">
+      C
+    </button>
+
   </div>
 
 </div>
 
-<!-- BARRA -->
+<!-- BARRA LATERAL -->
 <div id="progressBar">
+
   <div id="progress"></div>
+
 </div>
 
-<!-- START -->
-<button id="start">Iniciar</button>
+<!-- BOTÓN START -->
+<button id="start" type="button">
+  Iniciar
+</button>
 
+<!-- SCRIPT -->
 <script src="script.js"></script>
 
 </body>
